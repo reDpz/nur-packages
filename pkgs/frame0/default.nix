@@ -11,10 +11,10 @@
 , mesa
 , libdrm
 , libxcb
-, glib
+, libGL
 , alsa-lib
-, libgcc
-, autoPatchelfHook
+, libGLU
+, vulkan-loader
 }:
 
 stdenv.mkDerivation rec {
@@ -37,12 +37,11 @@ stdenv.mkDerivation rec {
     mesa
     libxcb
     alsa-lib
-    libgcc
-    glib
-    autoPatchelfHook
+    libGL
+    libGLU
+    vulkan-loader
   ];
 
-  dontAutoPatchelf = false;
 
   unpackPhase = ''
     # Extract the .deb file using `ar`
