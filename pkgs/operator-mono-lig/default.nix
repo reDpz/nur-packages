@@ -22,7 +22,7 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     homepage = "https://github.com/willfore/vscode_operator_mono_lig";
-    description = "Apple's SF Mono Font";
+    description = "Operator Mono with ligatures";
     license = licenses.unfree;
     platforms = platforms.all;
   };
