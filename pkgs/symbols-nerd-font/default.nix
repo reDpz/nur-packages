@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
   installPhase = ''
     runHook preInstall
     # find extracted -name '*.otf' -exec install -Dt $out/share/fonts/opentype {} \;
-    find extracted -name '*.ttf' -exec install -Dt $out/share/fonts/opentype {} \;
+    find extracted -name '*.ttf'    -exec install -Dt $out/share/fonts/truetype {} \;
     runHook postInstall
   '';
 
