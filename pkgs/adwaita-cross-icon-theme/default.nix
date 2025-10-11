@@ -52,6 +52,7 @@ stdenv.mkDerivation rec {
     mv $out/share/icons/Adwaita $out/share/icons/Adwaita-cross
     rm $out/share/icons/Adwaita-cross/cursors/arrow
     ln -s $out/share/icons/Adwaita-cross/cursors/crosshair $out/share/icons/Adwaita-cross/cursors/arrow
+    sed -i '0,/Adwaita/{s/Adwaita/Adwaita-cross/}' $out/share/icons/Adwaita-cross/index.theme
   '';
 
   dontDropIconThemeCache = true;
