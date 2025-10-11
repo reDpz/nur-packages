@@ -51,6 +51,7 @@ stdenv.mkDerivation rec {
   postInstall = ''
     rm $out/share/icons/Adwaita/cursors/arrow
     ln -s $out/share/icons/Adwaita/cursors/crosshair $out/share/icons/Adwaita/cursors/arrow
+    mv $out/share/icons/Adwaita $out/share/icons/Adwaita-cross
   '';
 
   dontDropIconThemeCache = true;
